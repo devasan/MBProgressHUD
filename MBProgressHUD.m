@@ -431,7 +431,9 @@ static const CGFloat MBDefaultDetailsLabelFontSize = 12.f;
     if (!color) return;
 
     self.label.textColor = color;
-    self.detailsLabel.textColor = color;
+    if (!self.ignoreTextColor) {
+        self.detailsLabel.textColor = color;
+    }
     [self.button setTitleColor:color forState:UIControlStateNormal];
 
     // UIAppearance settings are prioritized. If they are preset the set color is ignored.

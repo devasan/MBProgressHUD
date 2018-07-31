@@ -304,6 +304,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (strong, nonatomic, readonly) UIButton *button;
 
+
+@property (assign, nonatomic) BOOL ignoreTextColor;
+
 @end
 
 
